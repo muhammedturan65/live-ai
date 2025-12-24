@@ -17,7 +17,7 @@ Kısa, öz ve karşılıklı sohbete uygun cevaplar ver.
 Eğer kullanıcı üzgünse ses tonunu yumuşat, neşeliyse enerjik ol.
 """
 
-MODEL_ID = "gemini-2.0-flash-exp"  # En yeni Live model
+MODEL_ID = "gemini-2.5-flash-native-audio-dialog"  # En yeni Live model
 
 @app.websocket("/ws/chat")
 async def websocket_endpoint(websocket: WebSocket):
@@ -73,4 +73,5 @@ async def websocket_endpoint(websocket: WebSocket):
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
